@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Al Qods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-envelope"></i> Email: alqodsgroupescolaire@gmail.com</span>
+            <span><i class="fas fa-phone"></i> Contact: 05378-30083</span>
+        </div>
+        <div class="social-links">
+            <a href="https://web.facebook.com/GSALQofficial/?locale=sv_SE&_rdc=1&_rdr#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/gsalqods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@groupescolairealqods2031"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <nav>
+            <a href="#" class="logo">
+                <img src="img/alqodsLogo.png">
+            </a>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="#">GS Al Qods</a>
+                <a href="#">Pédagogie</a>
+                <a href="#">La Vie Au GSAB</a>
+                <a href="#">Emadariss</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    </div>
+
+    <div class="mobile-menu">
+        <button class="close-menu">×</button>
+        <a href="#">Home</a>
+        <a href="#">GS Al Bayane</a>
+        <a href="#">Pédagogie</a>
+        <a href="#">La Vie Au GSAB</a>
+        <a href="#">Emadariss</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>DU PRÉ-SCOLAIRE<br>JUSQU'AU LYCÉE</h1>
+            <a href="#" class="cta-button">Savoir Plus</a>
+        </div>
+    </div>
+        <div class="container">
+            <div class="grid">
+                <a href="#" class="card maternelle">
+                    <img class="cardImg" decoding="async" src="https://thepixelcurve.com/edubin/lp/wp-content/uploads/sites/2/2024/01/EDUBIN0004.png" title="" alt="" loading="lazy">                    <span>Maternelle</span>
+                </a>
+    
+                <a href="#" class="card primaire">
+                    <img class="cardImg" decoding="async" src="https://thepixelcurve.com/edubin/lp/wp-content/uploads/sites/2/2024/01/EDUBIN0006.png" title="" alt="" loading="lazy">                    <span>Primaire</span>
+                </a>
+    
+                <a href="#" class="card college">
+                    <img class="cardImg" decoding="async" src="https://thepixelcurve.com/edubin/lp/wp-content/uploads/sites/2/2024/01/EDUBIN0005.png" title="" alt="" loading="lazy">
+                    <span>Collège</span>
+                </a>
+    
+                <a href="#" class="card lycee">
+                    <img class="cardImg" decoding="async" src="https://thepixelcurve.com/edubin/lp/wp-content/uploads/sites/2/2024/01/EDUBIN0003.png" title="" alt="" loading="lazy">
+                    <span>Lycée</span>
+                </a>
+            </div>
+        </div>
+        <section class="director-section">
+            <div class="director-content">
+                <h1 class="director-title">Mot du directeur:</h1>
+                <p class="director-text">
+                    En quittant la blouse blanche de l'enseignant de mathématiques, j'ai plongé plus profondément dans l'art et la manière d'enseigner par la conception et la fondation du groupe scolaire Al Qods.
+                    <br>
+                    Je voulais cette école qui n'est pas comme les autres, un paradis d'apprentissage, de plaisir et d'épanouissement dans la région. C'est ainsi qu'Al Qods Salé, Mabella et Témara ont vu le jour.
+                    <br>
+                    L'école qui n'est pas comme les autres existe aujourd'hui et fait sensation: piscine, théâtre, musée, bibliothèque, gymnase, stade, espaces verts à pertes de vue, classes équipées à la pointe de la technologie, enseignement trilingue de la maternelle au baccalauréat, éducation positive, à l'écologie et à la citoyenneté, sans oublier le développement personnel et l'épanouissement de l'apprenant par les pratiques artistiques, l'art oratoire, la culture générale et la lecture.
+                    <br>
+                    Nous y sommes aujourd'hui, au cœur d'une école qui n'est pas comme les autres, qui forme des sommités de la science, de la médecine, de l'ingénierie et de bien d'autres champs disciplinaires.
+                    <br>
+                    Nous y sommes depuis 1978 et nous ne nous sentons jamais dépassés, car nous sommes les pionniers, les novateurs. Nous sommes ceux qui ont cru en la beauté de leurs rêves, nous continuons et nous continuerons.
+                    <br>
+                    <spam class="directeurNom">Abdelkader Zemmouri- Directeur Général et Fondateur du groupe scolaire Al Qods</spam>
+                </p>
+            </div>
+            <div class="director-image-container">
+                <img 
+                    src="img/directeurImg.jpg" 
+                    alt="Le directeur de l'établissement" 
+                    class="director-image"
+                >
+            </div>
+        </section>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrolled = window.pageYOffset;
+            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+        });
+        // Parallax effect for director section
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.director-content, .director-image-container').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
