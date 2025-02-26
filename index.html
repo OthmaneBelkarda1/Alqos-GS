@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GS Al Qods</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <div class="top-bar">
@@ -16,7 +16,7 @@
         <div class="social-links">
             <a href="https://web.facebook.com/GSALQofficial/?locale=sv_SE&_rdc=1&_rdr#"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/gsalqods?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+212661210421" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.youtube.com/@groupescolairealqods2031"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
@@ -28,11 +28,10 @@
             </a>
             <div class="menu">
                 <a href="index.html">Home</a>
-                <a href="#">GS Al Qods</a>
-                <a href="#">Pédagogie</a>
-                <a href="#">La Vie Au GSAB</a>
-                <a href="#">Emadariss</a>
-                <a href="#">Contact</a>
+                <a href="#service">Équipements</a>
+                <a href="alqods.html">GS Al Qods</a>
+                <a href="Galerie.html">Galerie</a>
+                <a href="#inscription">Inscription</a>
             </div>
             <button class="mobile-menu-btn">☰</button>
         </nav>
@@ -40,21 +39,19 @@
 
     <div class="mobile-menu">
         <button class="close-menu">×</button>
-        <a href="#">Home</a>
-        <a href="#">GS Al Bayane</a>
-        <a href="#">Pédagogie</a>
-        <a href="#">La Vie Au GSAB</a>
-        <a href="#">Emadariss</a>
-        <a href="#">Contact</a>
+        <a class="mobile-menu-btn" href="index.html">Home</a>
+        <a class="mobile-menu-btn" href="alqods.html">GS Al Qods</a>
+        <a class="mobile-menu-btn" href="Galerie.html">Galerie</a>
+        <a class="mobile-menu-btn" href="index.html#inscription">Aller à l'inscription</a>
     </div>
 
     <div class="hero">
         <div class="hero-content">
-            <h1>DU PRÉ-SCOLAIRE<br>JUSQU'AU LYCÉE</h1>
-            <a href="#" class="cta-button">Savoir Plus</a>
+            <h1 class="hero-content-tittle">DU PRÉ-SCOLAIRE<br>JUSQU'AU LYCÉE</h1>
+            <a href="#inscription" class="cta-button">inscriver vous maintenant</a>
         </div>
     </div>
-        <div class="container">
+        <div class="container" id="container">
             <div class="grid">
                 <a href="#" class="card maternelle">
                     <img class="cardImg" decoding="async" src="https://thepixelcurve.com/edubin/lp/wp-content/uploads/sites/2/2024/01/EDUBIN0004.png" title="" alt="" loading="lazy">                    <span>Maternelle</span>
@@ -100,55 +97,268 @@
                 >
             </div>
         </section>
-    <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const closeMenuBtn = document.querySelector('.close-menu');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-        });
-
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero');
-            const scrolled = window.pageYOffset;
-            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-        });
-        // Parallax effect for director section
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.director-content, .director-image-container').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+        <section class="services" id="service">
+            <div class="container1">
+              <h2 class="hero-content-tittle">Équipements:</h2>
+              
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://www.sportomaroc.ma/images/uploads/clubs/medium/silver-gym-rabat-temara-fitness-salle-de-sport-club-de-sport-musculation%20(3).jpg" alt="Cantine icon">
+                </div>
+                <div class="service-content">
+                  <h3>salles</h3>
+                  <p>Nos salles de classe ultra équipées .</p>
+                </div>
+              </div>
+          
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://www.visitrabat.com/wp-content/uploads/2019/05/bibliotheque_nationale-min.jpg" alt="Garderie icon">
+                </div>
+                <div class="service-content">
+                  <h3>bibliothèque </h3>
+                  <p>Notre bibliothèque bien garnie .</p>
+                </div>
+              </div>
+          
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://www.coverconcept.eu/wp-content/uploads/2023/01/piscine-couverte-toiture-ouvrante.png" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>piscine</h3>
+                  <p>Notre piscine qui fait le bonheur de nos élèves. </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://vifamagazine.ca/app/uploads/2018/08/1171-gymnase-1.jpg" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>gymnase</h3>
+                  <p>Notre gymnase pour garantir les séances d'éducation physique et sportive de tous les niveaux, qu'il pleuve, qu'il neige, qu'il fasse beau.                </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://fr.reformsports.com/oachoata/2020/09/mini-futbol-sahasi-ozellikleri-ve-olculeri.jpg" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>stade </h3>
+                  <p>Notre stade pour les compétitions enflammées d'enthousiasme et de joie.
+                </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://static.actu.fr/uploads/2022/08/cours-vegetalise-ecole-galilee-montpellier.jpg" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>cours de récréation </h3>
+                  <p>Nos cours de récréation pour des pauses gourmandes où la bonne humeur règne. </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://mobipark.com/wp-content/uploads/mobi-files/noticias/4-7-16_parque-rabat06.jpg?1501849032844" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>parc de jeux  </h3>
+                  <p>Notre parc de jeux inspiré des bacs à sable parisien, pour que les chérubins de la maternelle jouent en toute sécurité. </p>
+                </div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="https://familleactuelle.ma/wp-content/uploads/2023/06/DSC04592.jpg" alt="Activités icon">
+                </div>
+                <div class="service-content">
+                  <h3>potager   </h3>
+                  <p>Notre potager par lequel nous développons auprès de nos élèves l'importance et l'avenir que représente l'agriculture Bio.  </p>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+          <!--inscription-->
+         <div class="inscriptionside" id="inscription">
+          <section class="inscription-section">
+            <div class="form-header">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="logo-container">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alqodsLogo-W2qAmjwCqSIKywDC999UFiPT1agPBH.png" alt="Groupe Scolaire Al Qods Logo" class="logo">
+                </div>
+                <h2>Inscription 2024-2025</h2>
+                <p>Tenté d'inscrire votre enfant ? Rejoignez une institution d'excellence depuis 1978</p>
+            </div>
+    
+            <div class="form-container">
+                <form id="inscriptionForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nom et prénom du parent<span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                placeholder=""
+                                required
+                            >
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Nom et prénom de l'élève<span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                placeholder=""
+                                required
+                            >
+                     
+                        </div>
+                    </div>
+    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Âge de l'élève<span class="required">*</span></label>
+                            <input 
+                                type="number" 
+                                class="form-control" 
+                                placeholder="Ex: 6"
+                                min="2"
+                                max="18"
+                                required
+                            >
+                           
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Niveau souhaité<span class="required">*</span></label>
+                            <select class="form-control" required>
+                                <option value="">Sélectionnez un niveau</option>
+                                <option value="prescolaire">Préscolaire</option>
+                                <option value="primaire">Primaire</option>
+                                <option value="college">Collège</option>
+                                <option value="lycee">Lycée</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Numéro de téléphone<span class="required">*</span></label>
+                            <input 
+                                type="tel" 
+                                class="form-control" 
+                                placeholder="Ex: 06 12 34 56 78"
+                                pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
+                                required
+                            >
+                            <i class="form-icon">📱</i>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Adresse email<span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                placeholder="Ex: parent@email.com"
+                                required
+                            >
+                            <i class="form-icon">📧</i>
+                        </div>
+                    </div>
+    
+                    <button type="submit" class="submit-btn">
+                        Envoyer la demande d'inscription
+                    </button>
+    
+                    <div id="successMessage" class="success-message">
+                        Votre demande a été envoyée avec succès ! Notre équipe vous contactera très prochainement.
+                    </div>
+                </form>
+            </div>
+        </section>
+         </div>
+         <section class="contact-section">
+          <h2 class="section-title">Nos Localisations</h2>
+          
+          <div class="locations-grid">
+              <!-- Sale -->
+              <div class="location-card paris">
+                  <iframe 
+                      class="map-container"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184841.19623642758!2d-7.0646915889190165!3d33.92598664831499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76a6d83e4dbd7%3A0x25cf55881b7b5b6d!2sGroupe%20Scolaire%20Al%20Qods!5e1!3m2!1sfr!2sma!4v1740133508168!5m2!1sfr!2sma"
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                  <div class="location-info">
+                      <h3 class="location-name">Salé</h3>
+                      <p class="location-details">
+                        N6, Route de Méknès- Salé 
+                        <br>
+                        11000 Salé, Maroc
+                      </p>
+                      <div class="contact-infoà">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                          0537830083
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Marseille -->
+              <div class="location-card marseille">
+                  <iframe 
+                      class="map-container"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184841.19623642758!2d-7.0646915889190165!3d33.92598664831499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76db65889571d%3A0x9348067133e81c3d!2sGroupe%20Scolaire%20Al%20Qods%20Agdal!5e1!3m2!1sfr!2sma!4v1740133686836!5m2!1sfr!2sma" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                  <div class="location-info">
+                      <h3 class="location-name">Rabat</h3>
+                      <p class="location-details">
+                        Yassin, 20 , Rue Alachaari, Pl. Ibn Yassine, <br>
+                        10000 Rabat , Maroc
+                      </p>
+                      <div class="contact-infoà">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                          0537775688
+                      </div>
+                  </div>
+              </div>
+  <!--
+              
+              <div class="location-card lyon">
+                  <iframe 
+                      class="map-container"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.083137365516!2d4.832013515463385!3d45.76468937910573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x91e4ee4486d84c0!2sPlace%20Bellecour!5e0!3m2!1sfr!2sfr"
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                  <div class="location-info">
+                      <h3 class="location-name">Lyon</h3>
+                      <p class="location-details">
+                          15 Place Bellecour<br>
+                          69002 Lyon, France
+                      </p>
+                      <div class="contact-info">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                          +33 4 56 78 90 12
+                      </div>
+                  </div>
+              </div> -->
+          </div>
+      </section>
+    <script src="script/index.js"></script>
 </body>
 </html>
