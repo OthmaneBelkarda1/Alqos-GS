@@ -1,0 +1,7 @@
+.galerie{
+    column-count: 3;
+
+}
+img{
+    width: 100%;
+}
