@@ -25,7 +25,7 @@
         .contact-info, .social-links {
             display: flex;
             color: white;
-            gap: 20px;
+            gap: 50px;
             align-items: center;
         }
         .contact-info-text{
@@ -338,6 +338,7 @@
             line-height: 1.6;
             font-size: 16px;
             margin: 0;
+            text-align: justify;
         }
 
         .director-image-container {
@@ -375,73 +376,128 @@
             text-decoration: underline;
         }
         /*service*/
-        .services {
-            background-color: #3D6EA6 ;
-            color: white;
-            padding: 4rem 2rem;
-          }
-          
-          .container1 {
+        
+        .facilities-section {
             max-width: 1200px;
             margin: 0 auto;
-            
-          }
-          
-          h2 {
+            padding: 40px 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            justify-self: center;
-          }
-          
-          .service-card {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .facility-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .facility-icon {
+            height: 160px;
+            background-color: #3498db;
             display: flex;
             align-items: center;
-            flex-direction: column;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding: 1rem;
-          }
-          
-          .service-icon {
-            flex-shrink: 0;
-          }
-          
-          .service-icon img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .facility-icon img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-          }
-          
-          .service-content {
-            flex-grow: 1;
-          }
-          
-          .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            justify-self: center;
-          }
-          
-          .service-content p {
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-          }
-          
-          @media (max-width: 768px) {
-            .service-card {
-              flex-direction: column;
-              text-align: center;
-              gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .facility-card:hover .facility-icon img {
+            transform: scale(1.1);
+        }
+        
+        .facility-content {
+            padding: 20px;
+        }
+        
+        .facility-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .facility-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Color variations for icons */
+        .facility-card:nth-child(2n) .facility-icon {
+            background-color: #2ecc71;
+        }
+        
+        .facility-card:nth-child(3n) .facility-icon {
+            background-color: #e74c3c;
+        }
+        
+        .facility-card:nth-child(4n) .facility-icon {
+            background-color: #f39c12;
+        }
+        
+        .facility-card:nth-child(5n) .facility-icon {
+            background-color: #9b59b6;
+        }
+        
+        @media (max-width: 768px) {
+            .facilities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
             
-            .service-icon img {
-              width: 100px;
-              height: 100px;
+            .section-title {
+                font-size: 2rem;
             }
-          }
-            /*inscription*/
-       
+        }
+        
+        @media (max-width: 480px) {
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+       /*
+       location
+       */
             @keyframes slideUp {
                 from {
                     opacity: 0;
